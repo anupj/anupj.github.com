@@ -42,9 +42,9 @@ To complete this step you will need a Bamboo feature license in JIRA.
   * Under the Settings section, select the "Bamboo Project". You will be directed to the "Associate a Bamboo Project" page
   where you can assign an "instance" and enter the Bamboo project key.
 
-  ![JiraProjectSetting][1]
+ <img src="/images/gitjira-img1.png" class="noclip" alt="Account Table" />
 
-  ![AssociateBambooProject][2]  
+ <img src="/images/gitjira-img2.png" class="noclip" alt="Account Table" />
 
 Basically, this step links your JIRA project with your Bamboo project.
 
@@ -59,16 +59,16 @@ in the Commits tab under the Activity section.
 
   * Go to your repository settings in Bitbucket  and click on Links.
 
-  ![BBClickLinks][3]
+  <img src="/images/gitjira-img3.png" class="noclip" alt="Account Table" />
 
   * Then, click on the Atlassian Jira icon under "Add a new link", and enter following details.
 
-  ![BBLinkJIRA][4]
+  <img src="/images/gitjira-img4.png" class="noclip" alt="Account Table" />
 
   * Bitbucket is now linked to JIRA. If you commit your changes with the JIRA ticket number, your commits will 
   appear against the JIRA ticket in the Commits tab under the Activity section.
 
-  ![CommitInJira][5]
+  <img src="/images/gitjira-img5.png" class="noclip" alt="Account Table" />
 
 
 ##Step 4: Setup Bamboo in JIRA
@@ -79,7 +79,7 @@ BitBucket and deploy it to the CI org and Run All Tests.
 
   * Log into JIRA again, and click on the Atlassian Bamboo Admin link in the main settings drop down menu.
 
-  ![AtlassianBambooAdmin][6]
+  <img src="/images/gitjira-img6.png" class="noclip" alt="Account Table" />
 
   * On the Atlassian Bamboo Admin page, configure Elastic Bamboo by adding the AWS Access Key ID and updating 
   Elastic Bamboo Global Settings. Read the Bamboo documentation for more information
@@ -89,23 +89,23 @@ BitBucket and deploy it to the CI org and Run All Tests.
   jobs are executed.
   * Click on the Create Plan button to go to the Plan wizard page, and then click on the "Create a New Plan" link.
 
-  ![BambooCreatePlan][7]
+  <img src="/images/gitjira-img7.png" class="noclip" alt="Account Table" />
 
-  ![BambooCreatePlan2][8]
+  <img src="/images/gitjira-img8.png" class="noclip" alt="Account Table" />
 
   * Enter Plan details like Plan Name and Plan Key. If the project does not exist in the drop down list then select the new project option
   and enter the Project Name and Key.
 
-  ![PlanDetails][9]
+  <img src="/images/gitjira-img9.png" class="noclip" alt="Account Table" />
 
   * Enter Source Repository information
 
-  ![SourceRepo][10]
+  <img src="/images/gitjira-img10.png" class="noclip" alt="Account Table" />
 
   * Enter Trigger details like Trigger type, Polling Strategy, and Polling Frequency. This determines how and when the job should poll the repository. In this case we are
   requesting the job to poll the repository for changes every 30 sec.
 
-  ![TriggerDetail][12]
+  <img src="/images/gitjira-img11.png" class="noclip" alt="Account Table" />
 
   * Complete the process by clicking on "Configure Tasks" which takes you to the Configure Tasks wizard page where you can add tasks to the plan
   that will be executed in the desired order.
@@ -113,18 +113,19 @@ BitBucket and deploy it to the CI org and Run All Tests.
   * Since we will be using the Force.com migration toolkit which is based on Ant, you need to add the Ant task from
   the list.
 
-  ![AddAntTask][13]
+  <img src="/images/gitjira-img12.png" class="noclip" alt="Account Table" />
 
   * Enter the Ant Task details as shown below. The Target is the ant task that will be run by this job, and the Build
   File is the location of the build.xml file stored in the repository.
 
-  ![AntTaskDetail][14]
+  <img src="/images/gitjira-img13.png" class="noclip" alt="Account Table" />
 
 We have now created a Plan in Bamboo that will checkout the code from our Bitbucket repository when it changes (i.e.
 when we commit and push something to the repository), run the ant task that will deploy the code to the CI org and runs all tests. 
 The CI org details are listed in the **build.properties** file and deploy and run all tasks are defined in the **build.xml** file.
 
-![PlanTask][15]
+  <img src="/images/gitjira-img14.png" class="noclip" alt="Account Table" />
+
 
 
 ##Step 5: Add build.properties and build.xml to the repository
@@ -137,11 +138,11 @@ add it to the repository.
 Add a buid directory to your root project directory that will hold the build.xml and related build.properties and Migration toolkit jar file(inside lib 
 folder) as shown below. This structure will keep the src and the top-most folder clean.
 
-![RootDirectory][16]
+  <img src="/images/gitjira-img15.png" class="noclip" alt="Account Table" />
 
-![BuildDir][17]
+  <img src="/images/gitjira-img16.png" class="noclip" alt="Account Table" />
 
-![LibDir][18]
+  <img src="/images/gitjira-img17.png" class="noclip" alt="Account Table" />
 
 The build.properties file contains your username, password, server url for the CI org. 
 
@@ -220,23 +221,6 @@ email whenever a build succeeds or fails.
 Let me know in the comments if you want me to elaborate or explain a step in more detail, and I'll be more than happy
 to help.
 
-[1]: http://i.imgur.com/id2Vuw7.png
-[2]: http://i.imgur.com/tHNQ647.png
-[3]: http://i.imgur.com/TN6u5oS.png
-[4]: http://i.imgur.com/du7qyM8.png
-[5]: http://i.imgur.com/L3GD8pi.png
-[6]: http://i.imgur.com/4o5K1WW.png
-[7]: http://i.imgur.com/9u9XFZH.png
-[8]: http://i.imgur.com/0KSRsMl.png
-[9]: http://i.imgur.com/eVWwWCa.png
-[10]: http://i.imgur.com/XVXPGoI.png
-[12]: http://i.imgur.com/5w1aWLL.png
-[13]: http://i.imgur.com/szbLN4U.png
-[14]: http://i.imgur.com/JfXgftj.png
-[15]: http://i.imgur.com/NKSQptB.png
-[16]: http://i.imgur.com/eqKmUz5.png
-[17]: http://i.imgur.com/ZZU5tlk.png
-[18]: http://i.imgur.com/M0cjtx3.png
 [CI]: http://www.martinfowler.com/articles/continuousIntegration.html
 [git]: http://git-scm.com
 [jira]: http://jira.com
