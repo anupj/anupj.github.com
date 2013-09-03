@@ -1,6 +1,6 @@
 markdown: rdiscount
 pygments: true
-permalink: /posts/:title
+permalink: /posts/:year/:month/:day/:title
 rdiscount:
   extensions: [smart]
 title : Anup Jadhav
