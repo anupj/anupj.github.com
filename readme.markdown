@@ -5,3 +5,7 @@ based layout for [Jekyll](https://github.com/mojombo/jekyll)
 LICENCE
 --------------
 
+All content in _posts/ and images/ is copyright Anup Jadhav.
+
+The rest is covered by MIT license. Check out the LICENSE file in the source code for more details.
+

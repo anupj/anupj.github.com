@@ -11,8 +11,7 @@ What is the difference between Solutions and Knowledge?
 I found this neat little comparision chart in one of the service cloud training videos that shows the main differences 
 between Solutions and Knowledge.
 
-![comparision][1]
+  <img src="/images/knowledge.jpg" class="noclip" alt="Account Table" />
 
 Posting here for future reference.
 
-[1]: http://imgur.com/GhYfVdr.jpg
