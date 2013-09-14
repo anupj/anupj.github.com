@@ -120,6 +120,9 @@ BitBucket and deploy it to the CI org and Run All Tests.
 
   <img src="/images/gitjira-img13.png" class="noclip" alt="Account Table" />
 
+*[EDIT: One of the readers rightly pointed out that the "Build File" entry above should be build/build.xml, and "Target" 
+entry should be deployPackaged instead of buildCI]*
+
 We have now created a Plan in Bamboo that will checkout the code from our Bitbucket repository when it changes (i.e.
 when we commit and push something to the repository), run the ant task that will deploy the code to the CI org and runs all tests. 
 The CI org details are listed in the **build.properties** file and deploy and run all tasks are defined in the **build.xml** file.
