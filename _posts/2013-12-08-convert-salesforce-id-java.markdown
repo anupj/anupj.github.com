@@ -46,4 +46,4 @@ from this [Salesforce Stackexchange post][post].
 
 
 
-[Apex docs]: http://salesforce.stackexchange.com/questions/1653/what-are-salesforce-ids-composed-of
+[post]: http://salesforce.stackexchange.com/questions/1653/what-are-salesforce-ids-composed-of
