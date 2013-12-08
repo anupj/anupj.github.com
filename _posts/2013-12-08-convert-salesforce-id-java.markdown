@@ -10,7 +10,7 @@ ensure is that we always work with 18 character ids. The SOAP api always returns
 java app could be a csv file which may contain 15 character ids. 
 
 I created the following utility method in Java that converts 15 character id to 18 character id. The logic for the code was derived
-from this [Salesforce Stackexchange post][post].
+from this [Salesforce StackExchange post][post].
 
 {% highlight java %}
   // Converts 15 char salesforce id to 18 char id
