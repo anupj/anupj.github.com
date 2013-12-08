@@ -39,7 +39,7 @@ from this [Salesforce Stackexchange post][post].
   	
   	if(result.length() == 0) return null;
   	
-  	return original15charId+result.toString();
+  	return original15charId + result.toString();
   	
   }
 {% endhighlight %}
