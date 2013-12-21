@@ -8,28 +8,26 @@ comments: true
 I have been playing with the partner wsdl a lot lately. One of the things that I was trying to do was to create an Account,
 Contact and Opportunity object with one create() call to avoid calling the api multiple times.
 
-After some digging I came across the create() [api documentation][apidoc] gives a very good example of how you can create an Account and Opportunity using external id.
-I wrote the following the code the creates all three objects with one create() call. Hope this helps some intrepid developer who is trying to do something similar.
+After some digging I came across the create() [api documentation][apidoc] that has a very good example of how you can create an Account and Opportunity using external id.
+I wrote the following the code the inserts all three objects with one create() call. Hope this helps some intrepid developer who is trying to do something similar.
 
 {% highlight java %}
 
     // Create the connection object
     ConnectorConfig connector = new ConnectorConfig();
-		connector.setUsername(username);
-		connector.setPassword(password);
-
-		logger.debug("AuthEndPoint: " + this.endpoint);
-		connector.setAuthEndpoint(this.endpoint);
-		PartnerConnection sourceConnection = new PartnerConnection(connector);
+    connector.setUsername(username);
+    connector.setPassword(password);
+    connector.setAuthEndpoint(this.endpoint);
+    PartnerConnection sourceConnection = new PartnerConnection(connector);
 
     // Set the allOrNone header to true to make the call atomic
     __header.setAllOrNone(true);
-		sourceConnection.__setAllOrNoneHeader(__header);
+    sourceConnection.__setAllOrNoneHeader(__header);
 
-		// Create the SObjects array
-		SObject[] sObjects = new SObject[3];
+    // Create the SObjects array	
+    SObject[] sObjects = new SObject[3];
 		
-		// Create Account sObject
+    // Create Account sObject
 		SObject parentAccount = new SObject();
 		parentAccount.setType("Account"); 
 		parentAccount.setField("Name", "TestAccount1");
@@ -69,10 +67,7 @@ I wrote the following the code the creates all three objects with one create() c
 		for (int j = 0; j < results.length; j++) {
       if (results[j].isSuccess()) {
           result = results[j].getId();
-
-          logger.debug(
-                  "sobject was created with an ID of: " + result
-          );
+          logger.debug("sobject was created with an ID of: " + result);
        } else {
           // There were errors during the create call,
           // go through the errors array and write
@@ -88,9 +83,9 @@ I wrote the following the code the creates all three objects with one create() c
 {% endhighlight %}
 
 Some things to note:
-1. You can only insert objects one level deep with a single create() call. You can insert Account and Opportunity, but you cannot insert
+* You can only insert objects one level deep with a single create() call. You can insert Account and Opportunity, but you cannot insert
 Account, Opportunity, and OpportunityLineItem with one call. 
-2. This method relies on external ids but you are only allowed upto 3 external ids per object so design your objects carefully.
+* This method relies on external ids but you are only allowed upto 3 external ids per object so design your objects carefully.
 
 
 [apidoc]: http://www.salesforce.com/us/developer/docs/api/Content/sforce_api_calls_create.htm
