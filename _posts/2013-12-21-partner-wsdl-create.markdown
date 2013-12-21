@@ -44,7 +44,7 @@ I wrote the following the code the inserts all three objects with one create() c
 		childContact.setType("Contact"); 
 		childContact.setField("LastName", "TestContact1");
     childContact.setField("ContExtId__c", "CONT EXTID 1");
-    // Assign the account field to the account ref
+    // Assign the Account field to the account ref
 		childContact.setField("Account", parentAccountRef);
 		sObjects[1] = childContact;
 
@@ -83,6 +83,7 @@ I wrote the following the code the inserts all three objects with one create() c
 {% endhighlight %}
 
 Some things to note:
+
 * You can only insert objects one level deep with a single create() call. You can insert Account and Opportunity, but you cannot insert
 Account, Opportunity, and OpportunityLineItem with one call. 
 * This method relies on external ids but you are only allowed upto 3 external ids per object so design your objects carefully.
