@@ -87,7 +87,7 @@ Some things to note:
 * You can only insert objects one level deep with a single create() call. You can insert Account and Opportunity, but you cannot insert
 Account, Opportunity, and OpportunityLineItem with one call. 
 * This method relies on external ids but you are only allowed upto 3 external ids per object so design your objects carefully.
-* This method only works with the create() method. The upsert() method requires you to insert an array of sObjects of a single type. 
+* This strategy only works with the create() method. The upsert() method requires you to insert an array of sObjects of a single type. 
 * It will also work with the update() method if you set the id value of the sobjects. It doesn't work with external ids. This requires you to make a query to 
 your salesforce org to retrieve the ids before creating the sObject array.
 
