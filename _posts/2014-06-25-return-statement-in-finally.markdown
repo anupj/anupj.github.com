@@ -25,7 +25,7 @@ Consider the following code below. Pretend to be a compiler for a moment and pre
         returnVar = 'I am set in the Catch block.';
         return returnVar;
       } finally {
-        returnVar = 'I am set in the Finally block.'
+        returnVar = 'I am set in the Finally block.';
         return returnVar;
       }
       return returnVar; // Execution will never reach this statement
@@ -50,6 +50,6 @@ do decide to return from these blocks then be aware of this idiosyncracy. Since 
 on Java, I decided to test this in Java and _voila_ I could replicate this in Java as well.
 
 Before you return to your daily routine, here is some food for thought. If I modify the code slightly by commenting out the return 
-in the `Finally` block then the outcome is as expected - `The return string is: I am set in the Finally block.`. Go figure!
+in the `Finally` block then the outcome is as expected - `The return string is: I am set in the Catch block.`. Go figure!
 
 
