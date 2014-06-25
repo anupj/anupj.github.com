@@ -51,7 +51,7 @@ do decide to return from these blocks then be aware of this idiosyncracy. Since 
 on Java, I decided to test this in Java and _voila_ I could replicate this in Java as well.
 
 Before you return to your daily routine, here is some food for thought. If I modify the code slightly by commenting out the return 
-in the `Finally` block then the outcome is as expected - `The return string is: I am set in the Catch block.`. That is it now returns from
+in the `Finally` block then the outcome is as expected - `The return string is: I am set in the Catch block.`. That is, it now returns from
 the `Catch` block. Go figure!
 
 
