@@ -18,6 +18,7 @@ Please note that this feature is only available on the Salesforce1 mobile browse
 
 ###Salesforce1 - Drill down to reports and records from  Dashboards
 Another convenient feature if you access your reports and dashboards on the go. You can now drill down to individual records and reports from Dashboards.
+Reports can be viewed in tabular, summary, or Top N format and you can see a maximum of 100 records. 
 
 ###Force.com - Light or Enterprise Custom Objects
 This is an interesting feature that you need to be aware of because it might have some license implication especially if you use Force.com Light App or
