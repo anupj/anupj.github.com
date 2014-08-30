@@ -5,6 +5,8 @@ category: SalesforceRelease
 comments: true
 ---
 
+<img src="/images/winter15.png" class="noclip" alt="Winter 15" />
+
 Salesforce Winter '15 Release is upon us and I have cherrypicked some of the items
 that I find interesting and highlighted them below. Let me know in the comments which new feature has got you all excited.
 
