@@ -13,7 +13,7 @@ they need some tweaks and more real world use. Lately I have been working on sev
 why a user cannot access or search for a particular sObject record in Salesforce.
 
 This has resulted in a checklist (or a list of steps to follow) to investigate user access. 
-Before we jump into the checklist lets review the different elements of standard [Salesforce security].
+Before we jump into the checklist lets review the different elements of standard [Salesforce security](https://developer.salesforce.com/page/An_Overview_of_Force.com_Security).
 
 * Profiles - Defines application permissions(layout, apps, tabs etc), object permissions(CRUD, field level security), and system permissions(manage users, modify all data etc).
 * Org Wide Defaults (OWD) - Used to set default access to sObject records (database rows).
@@ -21,7 +21,7 @@ Before we jump into the checklist lets review the different elements of standard
 * Sharing Sets - Is used to give internal users (with a Salesforce license) access to records created by Communities/Portal users.
 * Roles - provides access to records in a hierarchical fashion.
 * Groups - Used to give record access to a group of individuals, roles, and other groups.
-* Implicit Sharing - [add stuff]
+* Implicit Sharing - also called Built-in sharing gives users (Read only) access to parent account if you have access to its child record and vice versa. Also provides limited account and contact access to portal users.
 * Record Ownership - If you own the record, then you can probably do CRUD action on the record.
 
 Without futher ado, I present the `Salesforce record access checklist` to investigate why a user cannot read/view or search a particular record.
