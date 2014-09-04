@@ -5,6 +5,8 @@ category: Apex
 comments: true
 ---
 
+<img src="/images/checklist.jpg" class="noclip" alt="Winter 15" />
+
 Ever since I read [The Checklist Manifesto](http://atulgawande.com/book/the-checklist-manifesto/) by Atul Gawande I have been creating checklists for some of the critical dev tasks.
 I have created a checklist for Salesforce deployment and for writing unit tests. These checklists are not ready to be shared yet because
 they need some tweaks and more real world use. Lately I have been working on several defects and issues around record access, particularly around
@@ -55,5 +57,4 @@ Sets** defined to provide access to internal users. If there are no Sharing Sets
 4. If you have reached this step and still haven't found the source of the problem, raise a ticket with Salesforce Support for further analysis.
 
 If you have found an error or would like to improve the checklist please leave a comment or reach out to me on Twitter.
-
 
