@@ -12,7 +12,7 @@ I have created a checklist for Salesforce deployment and for writing unit tests.
 they need some tweaks and more real world use. Lately I have been working on several defects and issues around record access, particularly around
 why a user cannot access or search for a particular sObject record in Salesforce.
 
-This has resulted in a checklist (or a list of steps to follow) to investigate user access. 
+This has resulted in a checklist (or a list of steps to follow) to investigate or debug user access. 
 Before we jump into the checklist lets review the different elements of standard [Salesforce security](https://developer.salesforce.com/page/An_Overview_of_Force.com_Security).
 
 * Profiles - Defines application permissions(layout, apps, tabs etc), object permissions(CRUD, field level security), and system permissions(manage users, modify all data etc).
