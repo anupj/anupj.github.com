@@ -10,6 +10,7 @@ on the Force.com platform that are either not documented, or is documented but d
 This post describes some of the quirks and some unknown facts of the Apex language that you might or might not have seen. 
 Let's dive in!
 
+
 **Map accepts `null` as a key**
 
 According to the [Apex docs][Apex docs]:
