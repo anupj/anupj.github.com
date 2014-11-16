@@ -8,7 +8,8 @@ comments: true
 Over the past few years, as a [Force.com][force] developer, I have come across a few interesting features and gotchas 
 on the Force.com platform that are either not documented, or is documented but developers don't know about it.
 This post describes some of the quirks and some unknown facts of the Apex language that you might or might not have seen. 
-Let's dive in!
+Let's dive in ! 
+
 
 **Map accepts `null` as a key**
 
