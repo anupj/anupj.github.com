@@ -5,7 +5,7 @@ category: Apex
 comments: true
 ---
 
-<img src="/images/checklist.jpg" class="noclip" alt="Winter 15" />
+<img src="/images/checklist.jpg" alt="Winter 15" />
 
 Ever since I read [The Checklist Manifesto](http://atulgawande.com/book/the-checklist-manifesto/) by Atul Gawande I have been creating checklists for some of the critical dev tasks.
 I have created a checklist for Salesforce deployment and for writing unit tests. These checklists are not ready to be shared yet because
