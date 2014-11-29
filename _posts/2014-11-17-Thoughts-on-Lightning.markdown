@@ -86,7 +86,7 @@ API queries. Therefore there are limits to queries per hour and request and resp
 
 <img src="/images/LightningConnectLimits.png"  alt="Lightning Connect Limits" />
 
-External Objects are represented as sObjectName__x (instead of __c) and is Read-only. Once your data is exposed as an oData source, you
+External Objects are represented as sObjectName\_\_x (instead of \_\_c) and is Read-only. Once your data is exposed as an oData source, you
 can setup External Object(s) declaratively. Checkout this presentation about External Data Sources for more information.
 
 A number of integration partners like Informatica Cloud, Jitterbit, Mule etc have also announced connectors to translate data to oData format
