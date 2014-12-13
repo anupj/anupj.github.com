@@ -21,7 +21,7 @@ Lightning is an umbrella marketing term for a number of different technologies:
 
 
 
-##Lightning Framework and Components
+###Lightning Framework and Components
 
 <img src="/images/LightningLayer.jpg"  alt="Lightning Layer" />
 
@@ -59,7 +59,7 @@ Salesforce1 apps at the moment.
 The purpose of this article is to familiarise you with the high level structure. Head over to the Lightning components [documentation](https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/) to grok more
 details.
 
-##Lightning App Builder
+###Lightning App Builder
 
 <img src="/images/LightningAppBuilder.png"  alt="Lightning App Builder" />
 
@@ -67,7 +67,7 @@ LAB is a new UI tool that will allow system administrators to create apps, add c
 using out of the box (standard) components provided by SF and custom components built by developers using a drag and drop interface.
 They will be able to achieve this without writing a single line of code. LAB is still in development and might change in look and feel.
 
-##Lightning Process Builder
+###Lightning Process Builder
 
 <img src="/images/LightningProcessBuilder.png"  alt="Lightning Process Builder" />
 
@@ -77,7 +77,7 @@ apex, update child/related records. This should let you get rid of some apex cod
 It will NOT replace Visual Flow because they are not the same thing.
 If you want to play with it is available in beta with the Winter '15 release.
 
-##Lightning Connect (aka Platform Connect aka External Data Sources)
+###Lightning Connect (aka Platform Connect aka External Data Sources)
 Lightning Connect enables your users to view data stored in external systems on-demand(via RESTful queries) as External Objects.
 The data should either be in oData format or imported using the Apex Connector Framework and (obviously) must be accessible via the internet.
 It's important to note that
@@ -92,7 +92,7 @@ can setup External Object(s) declaratively. Checkout this presentation about Ext
 A number of integration partners like Informatica Cloud, Jitterbit, Mule etc have also announced connectors to translate data to oData format
 to support Connect integration. This should replace some of the existing integration implementation solution.
 
-##Lightning Schema Builder
+###Lightning Schema Builder
 
 Nothing new here, just a rebrand of the Schema builder that we know and love. 
 
