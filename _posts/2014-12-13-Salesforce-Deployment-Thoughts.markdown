@@ -5,6 +5,9 @@ category: Deployment
 comments: true
 ---
 
+<img src="/images/deploy-button.jpg" height="300px" width="300px" alt="Deploy button" />
+
+
 Deployment is one of the most important part of any software project. It is very hard to justify the success of your project being "delivered on time", if your deployment fails (or takes longer than what is acceptable to the business) and requires a rollback. At best it is embarassing, at worst it affects your reputation. Depending on the size of the project, the deployment could be a 2 min activity by one person or a 2 day endeavour for an army of resources. An organisation attempting to reach the [Expert (Level 5) maturity level in Continuous Delivery](http://www.infoq.com/articles/Continuous-Delivery-Maturity-Model) are always looking at options to automate their deployment process. They want to be able to press a button after they have checked in their code in the master branch of their version control system, that runs all tests (unit, UI, regression), validates the deployment and then deploys the master branch to the production environment without human intervention. This is the holy grail of deployments that will lead to Continous Delivery nirvana. 
 
 Unfortunately, it is currently not possible to implement such a strategy on the Salesforce1 platform. Salesforce has, over the years, introduced a lot of innovation in how we build, compile, debug and test code in the cloud. However, one of the things that both newbies and seasoned developers on the platform still struggle with is automating deployments - both complex and simple - on the platform. Before we dive into the pains involved in creating an automated strategy, lets review the options currently available to deploy on the platform.
@@ -15,6 +18,7 @@ Unfortunately, it is currently not possible to implement such a strategy on the 
     4. Change Sets - Another way of sending customisations and modifications from one organisation to another. Change sets can only be sent between organizations that are affiliated with a production organization. For example, a production organization and a sandbox, or two sandboxes created from the same organization can send or receive change sets. I sometimes prefer change sets because with the right process we can keep track of deployments being made to diffenent environments.
 
 Now, lets look at some of the obstacles that prevent us from automating deployment on the platform:
+
     1. Changes to apex code that have apex jobs pending or in progress can't be deployed till the jobs have stopped or cancelled.
     2. Not all components [can be deployed](http://www.salesforce.com/us/developer/docs/api_meta/index_Left.htm#StartTopic=Content/meta_unsupported_types.htm?SearchType=Stem) via the Metadata API. There are some changes that you have to make manually like Account Teams, Case team roles, Console layout etc. It allows you to deploy the important components like Apex code, sObject metadata etc. But if we are talking about 100% automation, then this is not enough.
     3. Large deployments take an inordinate amount of time, and a single unit test failure requires aborting the deployment process and start over again after fixing the test class. Some of the reasons that affect deployment time are:
@@ -28,6 +32,7 @@ Now, lets look at some of the obstacles that prevent us from automating deployme
     6. You can deploy sObject schema changes but you cannot automate deployment of data changes along with it.
 
 This is ofcourse not ideal, and I hope that someone at Salesforce is working on fixing/improving this situation leading the innovation to improved deployment in the cloud. If I had a wish list, I'd ask for the following:
+
     1. Ability to rollback a deployment 
     2. Ability to deploy apex jobs without stopping or cancelling them
     3. Ability to deploy (almost) everything under Setup via the metadata api
@@ -37,6 +42,7 @@ This is ofcourse not ideal, and I hope that someone at Salesforce is working on 
 I recognise that it is a hard problem to solve and Salesforce will not be able to solve all of the deployment issues or be able to provide tools to enable 100% automated deployment. Some of the deployment issues will have to be solved by the developers by creating a deployment strategy that is aligned with your internal Release management strategy. 
 
 A deployment strategy should enable you to automate as much of your deployment process as possible:
+
     1. It should have a version control system to support deployments to different environments
     2. You can use a mixture of ant migration tool (for components that can be deployed via metadata api) and Change Sets (for components that cannot be deployed via Metadata API)
     3. The tools should be supported by a process or a set of processes that makes deployments easy without affecting developers time
@@ -46,11 +52,7 @@ A deployment strategy should enable you to automate as much of your deployment p
         * If you are working on multiple releases at the same time, consider using an Integration branch
         * Release manager to write automated scripts to message metadata and deploy from VCS branches to different environments. Only deploy deltas to other environments.
         * Maintain a template to track changes that are manually migrated or deployed using change sets
-    4. Build a continusous integration process to run tests automatically whenever something is checked in into the project / dev branch or master branch to ensure
+    4. Build a Continuous Integration process to run tests automatically whenever something is checked in into the project / dev branch or master branch to ensure
     
 In conclusion, even though we cannot automate deployments on the Force.com platform yet, we can still build processes and work flows that'll automate upto 75% of it. However, there is still scope for Salesforce to innovate in this space and release features to decrease the pain in deployments.
-
-    
-    
-
 
