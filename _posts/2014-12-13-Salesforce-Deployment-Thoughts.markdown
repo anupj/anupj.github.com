@@ -19,7 +19,7 @@ Unfortunately, it is currently not possible to implement such a strategy on the 
 
 Now, lets look at some of the obstacles that prevent us from automating deployment on the platform:
 
-  1. Changes to apex code that have apex jobs pending or in progress can't be deployed till the jobs have stopped or cancelled.
+  1. Changes to apex code that have apex jobs pending or in progress can't be deployed till the jobs have stopped or cancelled. Update: Sebastian pointed out in the comments that in Winter 15, this should now be possible.
   2. Not all components [can be deployed](http://www.salesforce.com/us/developer/docs/api_meta/index_Left.htm#StartTopic=Content/meta_unsupported_types.htm?SearchType=Stem/) via the Metadata API. There are some changes that you have to make manually like Account Teams, Case team roles, Console layout etc. It allows you to deploy the important components like Apex code, sObject metadata etc. But if we are talking about 100% automation, then this is not enough.
   3. Large deployments take an inordinate amount of time, and a single unit test failure requires aborting the deployment process and start over again after fixing the test class. Some of the reasons that affect deployment time are:
       * Number and size of files - no brainer really, the more you have to deploy, the longer it takes to deploy
@@ -34,10 +34,9 @@ Now, lets look at some of the obstacles that prevent us from automating deployme
 This is ofcourse not ideal, and I hope that someone at Salesforce is working on fixing/improving this situation leading the innovation to improved deployment in the cloud. If I had a wish list, I'd ask for the following:
 
   1. Ability to rollback a deployment 
-  2. Ability to deploy apex jobs without stopping or cancelling them
-  3. Ability to deploy (almost) everything under Setup via the metadata api
-  4. This one is controversial amongst my peers, but why not make 75% code coverage mandatory when deploying to sandboxes. More often than not, I have seen developers worry about this constraint at the end of the development lifecycle even in projects that claim to follow Agile methodologies like TDD. Making this mandatory will force the developer to tackle this issue early on and if they do it right it will create robust and better quality code. I think it'll make a lot of developers upset initially but they'll get over it.
-  5. Ability to create and trigger change set deployment via Ant Migration toolkit.
+  2. Ability to deploy (almost) everything under Setup via the metadata api
+  3. This one is controversial amongst my peers, but why not make 75% code coverage mandatory when deploying to sandboxes. More often than not, I have seen developers worry about this constraint at the end of the development lifecycle even in projects that claim to follow Agile methodologies like TDD. Making this mandatory will force the developer to tackle this issue early on and if they do it right it will create robust and better quality code. I think it'll make a lot of developers upset initially but they'll get over it.
+  4. Ability to create and trigger change set deployment via Ant Migration toolkit.
 
 I recognise that it is a hard problem to solve and Salesforce will not be able to solve all of the deployment issues or be able to provide tools to enable 100% automated deployment. Some of the deployment issues will have to be solved by the developers by creating a deployment strategy that is aligned with your internal Release management strategy. 
 
