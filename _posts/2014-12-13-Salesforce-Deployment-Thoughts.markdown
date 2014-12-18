@@ -51,7 +51,7 @@ A deployment strategy should enable you to automate as much of your deployment p
       * If you are working on multiple releases at the same time, consider using an Integration branch
       * Release manager to write automated scripts to message metadata and deploy from VCS branches to different environments. Only deploy deltas to other environments.
       * Maintain a template to track changes that are manually migrated or deployed using change sets
-  4. Build a Continuous Integration process to run tests automatically whenever something is checked in into the project / dev branch or master branch to ensure
+  4. Build a Continuous Integration process to run tests automatically whenever something is checked in into the project / dev branch or master branch to ensure the branch is always deployable
     
 In conclusion, even though we cannot automate deployments on the Force.com platform yet, we can still build processes and work flows that'll automate upto 75% of it. However, there is still scope for Salesforce to innovate in this space and release features to decrease the pain in deployments.
 
