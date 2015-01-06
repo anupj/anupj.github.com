@@ -1,0 +1,68 @@
+---
+layout: post
+title: "Javascript and Visualforce"
+category: development
+comments: true
+---
+
+There might be a number of reasons you would want to use Javascript on Visualforce - reduce viewstate, add dynamic ajax behaviour,
+improve performance etc. The platform gives you a number of options to use the two together including using libraries like jQuery and
+frameworks like AngularJS, Backbone etc.
+
+In this post, I'll explore three basic options to use Javascript within a visualforce page. These might seem familiar to veteran developers
+on the platform. Lets build a simple page with a custom controller that displays 10 random accounts from your org and allows you to edit the 
+name. The page looks like this.
+
+<img src="/images/NoJSControllerPage.png" height="500px" width="300px" alt="Deploy button" />
+
+Option 1: No Javascript
+Without javascript, you will rely on the standard <apex:form> post behaviour to save the changes to the database. The code will look like this.
+
+The controller retrieves 10 accounts and sets it to the "accounts" variable which is accessed by the VF page via a getter.
+
+{% highlight java %}
+public with sharing class NoJSController {
+	private final List<Account> accounts;
+    public NoJSController() {
+        this.accounts = [Select Id, Name from Account Limit 10];
+    }
+    
+    public List<Account> getAccounts() {
+        return this.accounts;
+    }
+    
+    public void save() {
+        update accounts;
+    }
+}
+{% highlight java %}
+
+The NoJSControllerPage displays the accounts in a PageBlockTable (inside the form component) and then calls the save method in the 
+controller to save the updated records.
+
+{% highlight html %}
+<apex:page controller="NoJSController">
+  <apex:page controller="NoJSController" >
+    <apex:form id="accountListForm">
+        <apex:pageBlock>
+    	<apex:pageBlockButtons>
+            <apex:commandButton value="Save" action="{!save}"/>
+        </apex:pageBlockButtons>
+        <apex:pageBlockTable value="{!accounts}" var="a">
+            <apex:column headerValue="Account" value="{!a.name}"/>
+            <apex:column headerValue="Name">
+                <apex:inputField value="{!a.name}" />
+            </apex:column>
+        </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
+</apex:page>
+{% highlight html %}
+
+Option 2: Using action function
+
+
+Option 3: Javascript Remoting
+
+
