@@ -12,7 +12,7 @@ If you don't like reading pages and pages of technical documentation, instead (l
 One of the appealing features of Trailhead is that it caters to both newbies who are just starting their salesforce journey, and experienced pros who have been building applications on the platform for some time. Trailhead is comprised of modules which in turn contain tutorials with an exercise at the end for the user to complete and earn points. When you complete all tutorials in a module you get a badge that you can show off on your community profile. Each module is focussed on one topic or feature and they can be completed in any order.
 
 
-Experienced developers and admins will breeze through the first few modules on platform basics, data model, security etc. The advanced sections around business processes, Visualforce, Apex, Process Builder and Lightning  will definitely teach you something new. And did I mention that you earn points and badges along the way.
+Experienced developers and admins will breeze through the first few modules on platform basics, data model, security etc. The advanced sections around business processes, Visualforce, Apex, Process Builder and Lightning  will definitely teach you something new. And did I mention that you can earn points and badges along the way.
 
 <img src="/images/trailhead-badges.png" width="40%" alt="Trailhead Badges" />
 
