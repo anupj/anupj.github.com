@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Learning Lightning components with Trailhead"
+title: "Start Learning Lightning components with Trailhead"
 category: development
 comments: true
 ---
