@@ -34,7 +34,7 @@ The module covers the following units:
 At the end of each unit you can complete an exercise and earn points. Don't skip the exercise since it helps you reinforce the understanding of key concepts and facts covered in the unit.
 
 
-The key takeawy is that if you are familiar with Visualforce and Apex, and you want to start building components asap, then this module will get you started.
+The key takeaway is that if you are familiar with Visualforce and Apex, and you want to start building components asap, then this module will get you started.
 
 [trailhead]: https://developer.salesforce.com/trailhead
 [component-trailhead]: https://developer.salesforce.com/trailhead/module/lightning_components
