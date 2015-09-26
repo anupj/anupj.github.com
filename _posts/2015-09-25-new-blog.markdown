@@ -7,7 +7,7 @@ comments: true
 
 Dear reader,
 
-Just a quick note to say that I've moved my new blog to http://www.anup.io.
+Just a quick note to say that I've moved my new blog to [http://www.anup.io][https://www.anup.io].
 
 kthanxbai!
 
