@@ -5,7 +5,7 @@ rdiscount:
   extensions: [smart]
 title : Anup Jadhav
 production_url : http://anupjadhav.com
-description: "Thoughts, Ideas, Comments and other things by Anup T Jadhav."
+description: "Thoughts, Ideas, Comments and other things by Anup Jadhav."
 disqus_shortname: anupj
 analytics: UA-17629471-1
 author :
